@@ -265,7 +265,7 @@ namespace Sharp.EndPoints
             }
             else
             { //serialize to XML ;
-                throw new Exception("content type not implemented");
+                throw new Exception("content type/s not implemented: " + string.Join("\n", context.Request.AcceptTypes));
             }
 
             if (sb.Tn != null)
