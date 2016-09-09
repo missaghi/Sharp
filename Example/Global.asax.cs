@@ -42,6 +42,7 @@ namespace Example
         protected void Application_Error(object sender, EventArgs e)
         {
             //replace TemplatePlugin.current file with your own 
+            Context.Response.StatusCode = 500;
             new Sharp.EndPoints.Error(sender, e);
         }
 
